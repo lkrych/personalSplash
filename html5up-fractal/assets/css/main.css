@@ -2409,13 +2409,13 @@
 				content: '';
 			}
 
-			.image.phone:before {
+			.image.phone .inner:before {
 				height: 2.5em;
 				border-radius: 1em 1em 0 0;
 				border-bottom: 0;
 			}
 
-			.image.phone:after {
+			.image.phone .inner:after {
 				height: 3.5em;
 				border-radius: 0 0 1em 1em;
 				border-top: 0;
@@ -2440,6 +2440,31 @@
 			.image.phone .inner:after {
 				border-color: #e6e6e6;
 			}
+	.image-header {
+		width: 45vw;
+		border-radius: 5px;
+		object-fit: contain;
+		position: relative;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+	}
+		.image-header img {
+			border-radius: 5px;
+			display: block;
+
+			width: 100%;
+		}
+
+		.image-header:before {
+			height: 2.5em;
+			border-radius: 1em 1em 0 0;
+			border-bottom: 0;
+		}
+
+		.image-header:after {
+			height: 3.5em;
+			border-radius: 0 0 1em 1em;
+			border-top: 0;
+		}
 
 /* List */
 
@@ -3886,6 +3911,18 @@
 		}
 
 			#header .image img {
+				-moz-transition: opacity 0.75s ease;
+				-webkit-transition: opacity 0.75s ease;
+				-ms-transition: opacity 0.75s ease;
+				transition: opacity 0.75s ease;
+				-moz-transition-delay: 0.75s;
+				-webkit-transition-delay: 0.75s;
+				-ms-transition-delay: 0.75s;
+				transition-delay: 0.75s;
+				opacity: 1;
+			}
+
+			#header .image-header img {
 				-moz-transition: opacity 0.75s ease;
 				-webkit-transition: opacity 0.75s ease;
 				-ms-transition: opacity 0.75s ease;
